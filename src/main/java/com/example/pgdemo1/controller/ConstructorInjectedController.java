@@ -1,7 +1,9 @@
 package com.example.pgdemo1.controller;
 
 import com.example.pgdemo1.services.GreetingService;
+import org.springframework.stereotype.Controller;
 
+@Controller
 public class ConstructorInjectedController {
 
     private final GreetingService greetingService;
