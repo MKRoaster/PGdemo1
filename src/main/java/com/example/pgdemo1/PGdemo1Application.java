@@ -19,7 +19,9 @@ public class PGdemo1Application {
 
         String methodSayHello = injectionController.sayHello();
 
-        System.out.println(methodSayHello);
+        System.out.println(" ---------- Primary ");
+
+        System.out.println(injectionController.sayHello());
 
         System.out.println(" ---------- Property ");
 

@@ -1,15 +1,23 @@
 package com.example.pgdemo1.controller;
 
+import com.example.pgdemo1.services.GreetingService;
 import org.springframework.stereotype.Controller;
+
+import javax.persistence.criteria.CriteriaBuilder;
 
 @Controller
 public class InjectionController {
 
+    private final GreetingService greetingService;
+
+
+    public InjectionController (GreetingService greetingService){
+
+        this.greetingService = greetingService;
+
+    }
+
     public String sayHello(){
-
-        System.out.println("Method saying hello");
-
-        return "Method returning String";
-
+        return greetingService.sayGreeting();
     }
 }
