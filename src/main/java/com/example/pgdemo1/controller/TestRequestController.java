@@ -10,7 +10,7 @@ public class TestRequestController {
     @RequestMapping("/hello")
     public String hello(Model model){
 
-        model.addAttribute("variable", "value");
+        model.addAttribute("var", "value");
 
         return "hello";
 
